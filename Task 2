@@ -1,0 +1,69 @@
+package myPackage.exam.colections;
+
+import java.util.*;
+
+public class Task2 implements Comparable<Car> {
+
+    public static void main(String[] args) {
+        //przynajmniej 10 elementów, pokrywająca większość przypadków i umożliwiająca po wyświetlonych danych ocenić działanie programu
+        Car auto1 = new Car(true, 2021, 5, null, 50000);
+        Car auto2 = new Car(false, 2010, 2, null, 10000);
+        Car auto3 = new Car(true, 2018, 4, null, 45000);
+        Car auto4 = new Car(true, 2016, 5, null, 40000);
+        Car auto5 = new Car(false, 2007, 1, null, 5000);
+        Car auto6 = new Car(false, 2015, 1, null, 15000);
+        Car auto7 = new Car(true, 2011, 3, null, 20000);
+        Car auto8 = new Car(false, 2020, 4, null, 35000);
+        Car auto9 = new Car(false, 2019, 5, null, 30000);
+        Car auto10 = new Car(true, 2014, 3, null, 25000);
+
+        List<Car> carList = new LinkedList<>(Arrays.asList(auto1, auto2, auto3, auto4, auto5, auto6, auto7, auto8, auto9, auto10));
+        //todo ma być posortowana po roczniku, auta nowesze jako pierwsze a starsze później, i stale utzymywać porządek
+
+        for (Car car : carList) {
+            System.out.println(car);
+        }
+    }
+
+    @Override
+    public int compareTo(Car o) {
+        return 0;
+    }
+}
+
+    //public static List<Car> getCarList() { //TIP singleton
+            //zwraca aktualny stan listy aut
+            //todo
+           // return null;
+        //}
+
+        //public static void printSortedCars () {
+            //Wypisz na konsolę listę aut (listę należy zrobić samodzielnie, przygotowanie DOBRYCH danych testowych jest cześcią zadania)
+            //lista ma być posotrowana po atrybutach w następującej kolejności:
+            //- auta ekskluzywne mają znajdować się na początku listy
+            //- auta najnowsze, o najwyższym roku produkcji, mają być wyświetlane przed autami starszymi
+            //- auta o wyższym poziomie wyposażenia mają być przed autami o niższym poziomie wyposażenia
+            //- auta droższe mają być wyświetlane przed tańszymi
+        //}
+
+        //public static void printCarsToValueAndLevelOfEquipment ( double maxValue, int levelOfEquipment){
+            //Kontekst biznesowy: klient wchodzi na stronę salonu samochodów używanych i chce zobaczyć auta do pewnej kwoty "maxValue"
+            // oraz mające konkretny poziom wyposażenia np: poziom 2 = auto ma klimatyzację, a poziom 1 auto klimatyzacji nie ma itp
+            //ZADANIE: wyfiltruj a następnie wypisz auta od najtańszego do najdroższego z listy aut
+            //todo tutaj wykonaj zadanie
+        //}
+
+        //public static void addCarsToList () {
+            //todo
+        //}
+
+       // public static void removeCarFromList () {
+            //todo
+        //}
+
+        //public static void printCarListAfterSomeModification () {
+            //dodaj 2-3 nowe auta do listy
+            //usuń z listy 1-2 auta
+            // wyświetl listę
+        //}
+
